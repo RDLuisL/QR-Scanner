@@ -6,22 +6,35 @@
     <title>Generador de Códigos QR</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="assets/plugins/qrCode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    
-<!-- Contador de visitas -->
-<center><a href="#" title="Contador De Visitas Gratis">
-    <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=16908"></a><br><a href='https://websmultimedia.com/contador-de-visitas-gratis'></a><br><a href='http://www.websmultimedia.com'></a></center>
-    <!-- Fin Contador de visitas -->
-
+    <div class="container">
+        <div class="row justify-content-center mt-12">
+        <div class="col-sm-12 shadow p-12">
+            <h5 class="text-center">Escanear codigo QR</h5>
+            <div class="row text-center">
+                <a id="btn-scan-qr" href="#">
+                    <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg" class="img-fluid text-center" width="175">
+                <a/>
+                <canvas hidden="" id="qr-canvas" class="img-fluid"></canvas>
+            </div>
+            <div class="row mx-5 my-3">
+                <button class="btn btn-success btn-sm rounded-3 mb-2" onclick="encenderCamara()">Encender camara</button>
+                <button class="btn btn-danger btn-sm rounded-3" onclick="cerrarCamara()">Detener camara</button>
+            </div>
+        </div>
+    </div>
     <footer>
         by Luis Luna <br>
         <a href="https://github.com/RDLuisL" target="_blank" style="text-decoration: none; color: black;"><i class="fa-brands fa-github"></i> RDLuisL</a>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" integrity="sha512-ZDSPMa/JM1D+7kdg2x3BsruQ6T/JpJo3jWDWkCZsP+5yVyp1KfESqLI+7RqB5k24F7p2cV7i2YHh/890y6P6Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </footer>    
+    
+ 
+    <audio id="audioScaner" src="store-scanner-beep.mp3"></audio>
     <script src="script.js"></script>
-
 </body>
 </html>
 
